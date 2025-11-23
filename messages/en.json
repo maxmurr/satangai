@@ -152,7 +152,106 @@
   },
   "Retirement": {
     "title": "Retirement Planning",
-    "description": "Plan for your retirement and calculate your future needs"
+    "description": "Plan your retirement by projecting wealth accumulation and analyzing your financial readiness",
+    "formModal": {
+      "createTitle": "Create Retirement Plan",
+      "updateTitle": "Update Retirement Plan",
+      "createDescription": "Set your retirement goals and see if you're on track",
+      "updateDescription": "Update your retirement planning parameters"
+    },
+    "formContent": {
+      "personalInfo": "Personal Information",
+      "currentAgeLabel": "Current Age",
+      "currentAgePlaceholder": "Enter your current age",
+      "retirementAgeLabel": "Target Retirement Age",
+      "retirementAgePlaceholder": "When do you plan to retire?",
+      "lifeExpectancyLabel": "Expected Lifespan",
+      "lifeExpectancyPlaceholder": "Life expectancy",
+      "financialGoals": "Financial Goals",
+      "monthlySavingsLabel": "Monthly Savings (฿)",
+      "monthlySavingsPlaceholder": "Amount you save monthly",
+      "monthlyExpensesLabel": "Expected Monthly Expenses in Retirement (฿)",
+      "monthlyExpensesPlaceholder": "Estimated retirement expenses",
+      "expectedReturnRateLabel": "Expected Annual Return Rate (%)",
+      "expectedReturnRateHelp": "Expected investment return rate per year",
+      "inflationAdjustedLabel": "Adjust for Inflation (Real Value)",
+      "inflationAdjustedHelp": "Account for 4% annual inflation in calculations",
+      "portfolioAllocation": "Portfolio Allocation",
+      "portfolioAllocationHelp": "Distribute your monthly savings across asset types (must total 100%)",
+      "stocksLabel": "Stocks/Equity (฿)",
+      "stocksHelp": "High-risk, high-return investments",
+      "fundsLabel": "RMF/SSF/PVD (฿)",
+      "fundsHelp": "Tax-advantaged retirement funds",
+      "cashLabel": "Cash Equivalents (฿)",
+      "cashHelp": "Low-risk, liquid assets",
+      "totalAllocation": "Total Allocation",
+      "allocationStatus": "allocation",
+      "saveButton": "Save Retirement Plan",
+      "updateButton": "Update Plan",
+      "savingButton": "Saving...",
+      "validations": {
+        "currentAgeMin": "Current age must be at least 18",
+        "currentAgeMax": "Current age cannot exceed 100",
+        "retirementAgeGreater": "Retirement age must be greater than current age",
+        "retirementAgeMax": "Retirement age cannot exceed 100",
+        "lifeExpectancyGreater": "Life expectancy must be greater than retirement age",
+        "lifeExpectancyMax": "Life expectancy cannot exceed 120",
+        "monthlySavingsNonNegative": "Monthly savings cannot be negative",
+        "monthlySavingsMax": "Monthly savings cannot exceed 1,000,000",
+        "monthlyExpensesPositive": "Monthly expenses must be positive",
+        "monthlyExpensesMax": "Monthly expenses cannot exceed 1,000,000",
+        "returnRateMin": "Return rate cannot be less than -10%",
+        "returnRateMax": "Return rate cannot exceed 20%",
+        "allocationMustEqual100": "Portfolio allocation must total 100% (currently {percent}%)"
+      },
+      "toastMessages": {
+        "successCreate": "Retirement plan saved successfully",
+        "successUpdate": "Retirement plan updated successfully",
+        "error": "Failed to save retirement plan"
+      }
+    },
+    "metrics": {
+      "gapStatus": "Gap Analysis",
+      "gapStatusDescription": "Difference between projected and target retirement wealth",
+      "surplus": "Surplus",
+      "shortfall": "Shortfall",
+      "targetWealth": "Target Wealth",
+      "targetWealthDescription": "Total wealth needed to sustain retirement based on your expected expenses",
+      "projectedWealth": "Projected Wealth",
+      "projectedWealthDescription": "Expected wealth at retirement based on your savings and return rate",
+      "yearsToRetirement": "Years to Retirement",
+      "yearsToRetirementDescription": "Time remaining until your target retirement age",
+      "years": "years",
+      "onTrack": "On Track",
+      "needsMore": "Needs More"
+    },
+    "chart": {
+      "title": "Wealth Accumulation Timeline",
+      "description": "Projected wealth from now through retirement and beyond",
+      "age": "Age",
+      "wealth": "Wealth (฿)",
+      "year": "Year",
+      "phase": "Phase",
+      "accumulation": "Accumulation",
+      "withdrawal": "Withdrawal",
+      "retirementAge": "Retirement Age"
+    },
+    "allocation": {
+      "title": "Portfolio Allocation",
+      "description": "Your monthly savings distribution across asset types",
+      "stocksEquity": "Stocks/Equity",
+      "rmfSsfPvd": "RMF/SSF/PVD",
+      "cashEquivalents": "Cash Equivalents",
+      "total": "Total Monthly Savings"
+    },
+    "states": {
+      "errorTitle": "Error Loading Retirement Data",
+      "errorDescription": "An unexpected error occurred while loading your retirement planning data.",
+      "tryAgain": "Try Again",
+      "emptyTitle": "No Retirement Plan",
+      "emptyDescription": "Get started by creating your first retirement plan. Set your retirement age, savings goals, and see if you're on track for a comfortable retirement.",
+      "createFirstPlan": "Create First Plan"
+    }
   },
   "Common": {
     "loading": "Loading...",

@@ -6,12 +6,11 @@ import { Moon, Sun } from "lucide-react";
 
 export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(typeof window !== "undefined");
+  const [mounted, setMounted] = useState(false);
   const [isPending, startTransition] = useTransition();
 
   // Only render after mounting to avoid hydration mismatch
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
