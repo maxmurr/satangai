@@ -20,6 +20,7 @@ interface CashFlowTooltipProps {
   active?: boolean;
   payload?: Array<{
     payload: { name: string; value: number; percentage: string };
+    dataKey?: string;
   }>;
   colors?: string[];
   amountLabel?: string;
@@ -29,7 +30,6 @@ interface CashFlowTooltipProps {
 function CashFlowTooltip({
   active,
   payload,
-  colors,
   amountLabel = "Amount",
   percentageLabel = "Percentage",
 }: CashFlowTooltipProps) {
@@ -43,34 +43,25 @@ function CashFlowTooltip({
     percentage: string;
   };
 
-  const defaultColors = [
-    "oklch(0.646 0.222 41.116)",
-    "oklch(0.6 0.118 184.704)",
-    "oklch(0.398 0.07 227.392)",
-    "oklch(0.828 0.189 84.429)",
-  ];
-
-  const colorArray = colors || defaultColors;
-
   return (
     <div className="rounded-lg border border-border bg-card p-3 shadow-lg">
       <div className="space-y-2">
         <div className="flex items-center gap-2">
-          <div
-            className="h-3 w-3 rounded-sm"
-            style={{ backgroundColor: colorArray[0] }}
-          />
           <div className="font-semibold text-card-foreground">{data.name}</div>
         </div>
         <div className="space-y-1">
           <div className="flex items-center justify-between gap-4">
-            <span className="text-sm text-muted-foreground">{amountLabel}:</span>
+            <span className="text-sm text-muted-foreground">
+              {amountLabel}:
+            </span>
             <span className="font-mono font-bold text-foreground">
               {data.value.toLocaleString()} ฿
             </span>
           </div>
           <div className="flex items-center justify-between gap-4">
-            <span className="text-sm text-muted-foreground">{percentageLabel}:</span>
+            <span className="text-sm text-muted-foreground">
+              {percentageLabel}:
+            </span>
             <span className="font-mono font-bold text-foreground">
               {data.percentage}%
             </span>
@@ -84,16 +75,16 @@ function CashFlowTooltip({
 // Chart colors that match globals.css
 const CHART_COLORS = {
   light: [
-    "oklch(0.646 0.222 41.116)",    // chart-1: orange/amber
-    "oklch(0.6 0.118 184.704)",     // chart-2: blue
-    "oklch(0.398 0.07 227.392)",    // chart-3: purple
-    "oklch(0.828 0.189 84.429)",    // chart-4: green/yellow
+    "oklch(0.646 0.222 41.116)", // chart-1: orange/amber
+    "oklch(0.6 0.118 184.704)", // chart-2: blue
+    "oklch(0.398 0.07 227.392)", // chart-3: purple
+    "oklch(0.828 0.189 84.429)", // chart-4: green/yellow
   ],
   dark: [
-    "oklch(0.488 0.243 264.376)",   // chart-1: purple
-    "oklch(0.696 0.17 162.48)",     // chart-2: cyan
-    "oklch(0.769 0.188 70.08)",     // chart-3: yellow
-    "oklch(0.627 0.265 303.9)",     // chart-4: pink
+    "oklch(0.488 0.243 264.376)", // chart-1: purple
+    "oklch(0.696 0.17 162.48)", // chart-2: cyan
+    "oklch(0.769 0.188 70.08)", // chart-3: yellow
+    "oklch(0.627 0.265 303.9)", // chart-4: pink
   ],
 };
 
@@ -101,7 +92,9 @@ export function CashFlowChart({ metrics }: CashFlowChartProps) {
   const t = useTranslations("CashFlow.chart");
 
   // Get colors based on current theme (defaults to light)
-  const isDark = typeof window !== "undefined" && document.documentElement.classList.contains("dark");
+  const isDark =
+    typeof window !== "undefined" &&
+    document.documentElement.classList.contains("dark");
   const colors = isDark ? CHART_COLORS.dark : CHART_COLORS.light;
 
   const chartData = [
@@ -165,7 +158,16 @@ export function CashFlowChart({ metrics }: CashFlowChartProps) {
         >
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Tooltip content={<CashFlowTooltip colors={colors} amountLabel={t("amount")} percentageLabel={t("percentage")} />} cursor={false} />
+              <Tooltip
+                content={
+                  <CashFlowTooltip
+                    colors={colors}
+                    amountLabel={t("amount")}
+                    percentageLabel={t("percentage")}
+                  />
+                }
+                cursor={false}
+              />
               <Pie
                 data={chartData}
                 cx="50%"
@@ -212,7 +214,9 @@ export function CashFlowChart({ metrics }: CashFlowChartProps) {
           {/* Summary */}
           <div className="grid gap-3 border-t pt-4 sm:grid-cols-2">
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">{t("totalAllocated")}</p>
+              <p className="text-sm text-muted-foreground">
+                {t("totalAllocated")}
+              </p>
               <p className="text-xl font-bold">
                 {(
                   metrics.expenses +
@@ -223,7 +227,9 @@ export function CashFlowChart({ metrics }: CashFlowChartProps) {
               </p>
             </div>
             <div className="space-y-1">
-              <p className="text-sm text-muted-foreground">{t("totalIncome")}</p>
+              <p className="text-sm text-muted-foreground">
+                {t("totalIncome")}
+              </p>
               <p className="text-xl font-bold">
                 {metrics.monthlyIncome.toLocaleString()} ฿
               </p>
