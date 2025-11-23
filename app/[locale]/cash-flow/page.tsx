@@ -51,14 +51,18 @@ export default function CashFlowPage() {
 
   if (!cashflows || cashflows.length === 0) {
     return (
-      <div className="container mx-auto space-y-8 px-4 py-8 sm:px-6 lg:px-8">
-        <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
-          <p className="text-muted-foreground">{t("description")}</p>
+      <>
+        <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+          <div className="w-full max-w-md text-center space-y-8">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
+              <p className="text-muted-foreground">{t("description")}</p>
+            </div>
+            <CashFlowEmptyState onGetStarted={() => setFormOpen(true)} />
+          </div>
         </div>
-        <CashFlowEmptyState onGetStarted={() => setFormOpen(true)} />
         <CashFlowFormModal open={formOpen} onOpenChange={setFormOpen} />
-      </div>
+      </>
     );
   }
 
