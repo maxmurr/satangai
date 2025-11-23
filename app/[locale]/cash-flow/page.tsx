@@ -57,7 +57,7 @@ export default function CashFlowPage() {
             <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
             <p className="text-muted-foreground">{t("description")}</p>
           </div>
-          <div className="flex min-h-[400px] items-center justify-center">
+          <div className="flex min-h-[calc(100vh-18rem)] items-center justify-center">
             <CashFlowEmptyState onGetStarted={() => setFormOpen(true)} />
           </div>
         </div>
