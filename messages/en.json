@@ -1,0 +1,167 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "cashFlow": "Cash Flow",
+    "taxPlanner": "Tax Planner",
+    "retirement": "Retirement",
+    "language": "Language"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "en": "English",
+    "th": "ไทย"
+  },
+  "CashFlow": {
+    "title": "Cash Flow Management",
+    "description": "Understand your monthly financial health by allocating your income",
+    "empty": "No cash flow data yet",
+    "emptyDescription": "Get started by creating your first cash flow entry. Set your monthly income and allocate it across expenses, debt, and investments to see your financial health score.",
+    "createFirstEntry": "Create First Entry",
+    "loading": "Loading cash flow data...",
+    "error": "Error Loading Cash Flow Data",
+    "errorDescription": "An unexpected error occurred while loading your cash flow data.",
+    "retry": "Try Again",
+    "edit": "Edit",
+    "done": "Done",
+    "form": {
+      "title": "Create Cash Flow",
+      "updateTitle": "Update Cash Flow",
+      "description": "Set your monthly income and allocate it across expenses, debt, and investments",
+      "updateDescription": "Update your cash flow allocation",
+      "monthlyIncome": "Monthly Income (฿)",
+      "expenses": "Expenses (฿)",
+      "debt": "Debt Payments (฿)",
+      "investments": "Investments (฿)",
+      "totalAllocated": "Total Allocated",
+      "remainingCash": "Remaining Cash",
+      "allocated": "allocated",
+      "save": "Save Cash Flow",
+      "update": "Update",
+      "saving": "Saving...",
+      "success": "Cash flow saved successfully",
+      "updateSuccess": "Cash flow updated successfully",
+      "error": "Failed to save cash flow data"
+    },
+    "metrics": {
+      "financialHealthScore": "Financial Health Score",
+      "financialHealthDescription": "Weighted score based on savings rate, cash reserves, and debt levels",
+      "outOf": "out of 100",
+      "debtToEquityRatio": "Debt-to-Equity Ratio",
+      "debtToEquityDescription": "Ratio of debt to net income. Lower is better. Target: < 0.5",
+      "excellent": "Excellent",
+      "good": "Good",
+      "needsImprovement": "Needs Improvement",
+      "savingRatio": "Saving Ratio",
+      "savingRatioDescription": "Percentage of income allocated to investments. Target: > 20%",
+      "onTarget": "On Target",
+      "belowTarget": "Below Target",
+      "remainingCash": "Remaining Cash",
+      "remainingCashDescription": "Monthly cash left after all allocations",
+      "available": "Available",
+      "overAllocated": "Over-allocated"
+    },
+    "chart": {
+      "title": "Cash Flow Breakdown",
+      "description": "Monthly allocation distribution",
+      "allocationDetails": "Allocation Details",
+      "expenses": "Expenses",
+      "debt": "Debt Payments",
+      "investments": "Investments",
+      "remainingCash": "Remaining Cash",
+      "totalIncome": "Total Income"
+    },
+    "entryInfo": {
+      "title": "Entry Information",
+      "created": "Created",
+      "lastUpdated": "Last Updated",
+      "monthlyIncome": "Monthly Income"
+    },
+    "formModal": {
+      "createTitle": "Create Cash Flow",
+      "updateTitle": "Update Cash Flow",
+      "createDescription": "Set your monthly income and allocate it across expenses, debt, and investments",
+      "updateDescription": "Update your cash flow allocation"
+    },
+    "formContent": {
+      "monthlyIncomeLabel": "Monthly Income (฿)",
+      "monthlyIncomePlaceholder": "Enter monthly income",
+      "expensesLabel": "Expenses (฿)",
+      "debtLabel": "Debt Payments (฿)",
+      "investmentsLabel": "Investments (฿)",
+      "totalAllocated": "Total Allocated",
+      "remainingCash": "Remaining Cash",
+      "allocated": "% allocated",
+      "saveButton": "Save Cash Flow",
+      "updateButton": "Update",
+      "savingButton": "Saving...",
+      "validations": {
+        "monthlyIncomePositive": "Monthly income must be positive",
+        "expensesNonNegative": "Expenses cannot be negative",
+        "debtNonNegative": "Debt cannot be negative",
+        "investmentsNonNegative": "Investments cannot be negative",
+        "allocationExceedsIncome": "Total allocations cannot exceed income"
+      },
+      "toastMessages": {
+        "successCreate": "Cash flow saved successfully",
+        "successUpdate": "Cash flow updated successfully",
+        "error": "Failed to save cash flow data"
+      }
+    },
+    "metrics": {
+      "financialHealthScore": "Financial Health Score",
+      "financialHealthDescription": "Weighted score based on savings rate, cash reserves, and debt levels",
+      "outOf": "out of 100",
+      "debtToEquityRatio": "Debt-to-Equity Ratio",
+      "debtToEquityDescription": "Ratio of debt to net income. Lower is better. Target: < 0.5",
+      "excellent": "Excellent",
+      "good": "Good",
+      "needsImprovement": "Needs Improvement",
+      "savingRatio": "Saving Ratio",
+      "savingRatioDescription": "Percentage of income allocated to investments. Target: > 20%",
+      "onTarget": "On Target",
+      "belowTarget": "Below Target",
+      "remainingCash": "Remaining Cash",
+      "remainingCashDescription": "Monthly cash left after all allocations",
+      "available": "Available",
+      "overAllocated": "Over-allocated"
+    },
+    "chart": {
+      "title": "Cash Flow Breakdown",
+      "description": "Monthly allocation distribution",
+      "expenses": "Expenses",
+      "debtPayments": "Debt Payments",
+      "investments": "Investments",
+      "remainingCash": "Remaining Cash",
+      "totalAllocated": "Total Allocated",
+      "totalIncome": "Total Income",
+      "amount": "Amount",
+      "percentage": "Percentage"
+    },
+    "states": {
+      "errorTitle": "Error Loading Cash Flow Data",
+      "errorDescription": "An unexpected error occurred while loading your cash flow data.",
+      "tryAgain": "Try Again",
+      "emptyTitle": "No Cash Flow Data",
+      "emptyDescription": "Get started by creating your first cash flow entry. Set your monthly income and allocate it across expenses, debt, and investments to see your financial health score.",
+      "createFirstEntry": "Create First Entry"
+    }
+  },
+  "TaxPlanner": {
+    "title": "Tax Planner",
+    "description": "Optimize your tax strategy and calculate your tax obligations"
+  },
+  "Retirement": {
+    "title": "Retirement Planning",
+    "description": "Plan for your retirement and calculate your future needs"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  }
+}
